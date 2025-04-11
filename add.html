@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>Add Inventory</title>
+</head>
+<body>
+    <h1>Add Inventory Item</h1>
+    <form action="view.html">
+        <label>Item Name:</label>
+        <input type="text" required><br><br>
+
+        <label>Category:</label>
+        <select>
+            <option>Fresh Produce</option>
+            <option>Rice, Grain & Flour</option>
+            <option>Coffee/Beverage Supplies</option>
+            <option>Food Essentials</option>
+            <option>Dairy Products</option>
+            <option>Snacks</option>
+            <option>Fozen</option>
+        </select><br><br>
+
+        <label>Storage places</label><br>
+        <label for="storage1">Refrigerators</label>
+        <input type="checkbox" id="storage1" name="storage1" value="Refrigerators"><br>
+        <label for="storage2">Freezers</label>
+        <input type="checkbox" id="storage2" name="storage2" value="Freezers"><br>
+        <label for="storage3">Dry Storage</label>
+        <input type="checkbox" id="storage3" name="storage3" value="Dry_Storage"><br>
+        <label for="storage4">Warehouses</label>
+        <input type="checkbox" id="storage4" name="vehicle2" value="Warehouses"><br><br>
+
+        <label>Quantity:</label>
+        <input type="number" required><br><br>
+
+        <label>Price (RM):</label>
+        <input type="text" required><br><br>
+
+        <label>EXP Date</label>
+        <input type="date" required><br><br>
+
+        <label>Supplier Type:</label><br>
+        <input type="radio" name="supplier" value="Local Supplier" required>
+        <label for="local">Local Supplier</label><br>
+
+        <input type="radio" name="supplier" value="Imported Supplier">
+        <label for="imported">Imported Supplier</labl><br><br>
+
+        </label>Upload Image:</label><br>
+        <input type="file" ><br><br>
+
+        <label>Notes/Comments:</label><br>
+        <textarea rows="3" cols="30"></textarea><br><br>
+
+        <button type="submit">Add Item</button>
+    </form>
+    <br>
+    <a href="index.html">Back to Home</a>
+</body>
+</html>
+
