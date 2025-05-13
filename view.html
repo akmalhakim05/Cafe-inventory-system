@@ -1,10 +1,79 @@
 <html>
 <head>
     <title>View Inventory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        img {
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Inventory List</h1>
-    <table border="1">
+    <h1>Inventory List</h1>  
+    <table>
         <tr>
             <th>Item ID</th>
             <th>Item Image</th>
@@ -14,9 +83,8 @@
             <th>Quantity</th>
             <th>Price (RM)</th>
             <th>EXP Date</th>
-            <td>Supplier Type:</td>
+            <th>Supplier Type</th>
             <th>Notes</th>
-            <th>Delete</th>
         </tr>
         <tr>
             <td>1</td>
@@ -29,7 +97,6 @@
             <td>2024-12-31</td>
             <td>Local</td>
             <td>-</td>
-            <td><button>Delete</button></td>
         </tr>
         <tr>
             <td>2</td>
@@ -42,7 +109,6 @@
             <td>2024-06-15</td>
             <td>Local</td>
             <td>-</td>
-            <td><button>Delete</button></td>
         </tr>
         <tr>
             <td>3</td>
@@ -55,7 +121,6 @@
             <td>2024-07-20</td>
             <td>Imported</td>
             <td>-</td>
-            <td><button>Delete</button></td>
         </tr>
         <tr>
             <td>4</td>
@@ -68,7 +133,6 @@
             <td>2025-01-10</td>
             <td>Local</td>
             <td>-</td>
-            <td><button>Delete</button></td>
         </tr>
         <tr>
             <td>5</td>
@@ -81,9 +145,9 @@
             <td>2025-03-15</td>
             <td>Imported</td>
             <td>-</td>
-            <td><button >Delete</button></td>
         </tr>
     </table>
     <a href="index.html">Back to Home</a>
 </body>
 </html>
+

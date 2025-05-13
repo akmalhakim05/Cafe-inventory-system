@@ -1,60 +1,130 @@
 <html>
 <head>
     <title>Add Inventory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 30px 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Add Inventory Item</h1>
-    <form action="view.html">
-        <label>Item Name:</label>
-        <input type="text" required><br><br>
+    <div class="container">
+        <h1>Add Inventory Item</h1>
+        <form action="view.html">
+            <label>Item Name:</label>
+            <input type="text" required>
 
-        <label>Category:</label>
-        <select>
-            <option>Fresh Produce</option>
-            <option>Rice, Grain & Flour</option>
-            <option>Coffee/Beverage Supplies</option>
-            <option>Food Essentials</option>
-            <option>Dairy Products</option>
-            <option>Snacks</option>
-            <option>Fozen</option>
-        </select><br><br>
+            <label>Category:</label>
+            <select>
+                <option>Fresh Produce</option>
+                <option>Rice, Grain & Flour</option>
+                <option>Coffee/Beverage Supplies</option>
+                <option>Food Essentials</option>
+                <option>Dairy Products</option>
+                <option>Snacks</option>
+                <option>Fozen</option>
+            </select>
 
-        <label>Storage places</label><br>
-        <label for="storage1">Refrigerators</label>
-        <input type="checkbox" id="storage1" name="storage1" value="Refrigerators"><br>
-        <label for="storage2">Freezers</label>
-        <input type="checkbox" id="storage2" name="storage2" value="Freezers"><br>
-        <label for="storage3">Dry Storage</label>
-        <input type="checkbox" id="storage3" name="storage3" value="Dry_Storage"><br>
-        <label for="storage4">Warehouses</label>
-        <input type="checkbox" id="storage4" name="vehicle2" value="Warehouses"><br><br>
+            <label>Storage places</label>
+            <label><input type="checkbox" name="storage1" value="Refrigerators"> Refrigerators</label>
+            <label><input type="checkbox" name="storage2" value="Freezers"> Freezers</label>
+            <label><input type="checkbox" name="storage3" value="Dry_Storage"> Dry Storage</label>
+            <label><input type="checkbox" name="storage4" value="Warehouses"> Warehouses</label>
 
-        <label>Quantity:</label>
-        <input type="number" required><br><br>
+            <label>Quantity:</label>
+            <input type="number" required>
 
-        <label>Price (RM):</label>
-        <input type="text" required><br><br>
+            <label>Price (RM):</label>
+            <input type="text" required>
 
-        <label>EXP Date</label>
-        <input type="date" required><br><br>
+            <label>EXP Date</label>
+            <input type="date" required>
 
-        <label>Supplier Type:</label><br>
-        <input type="radio" name="supplier" value="Local Supplier" required>
-        <label for="local">Local Supplier</label><br>
+            <label>Supplier Type:</label>
+            <label><input type="radio" name="supplier" value="Local Supplier" required> Local Supplier</label>
+            <label><input type="radio" name="supplier" value="Imported Supplier"> Imported Supplier</label>
 
-        <input type="radio" name="supplier" value="Imported Supplier">
-        <label for="imported">Imported Supplier</labl><br><br>
+            <label>Upload Image:</label>
+            <input type="file">
 
-        </label>Upload Image:</label><br>
-        <input type="file" ><br><br>
+            <label>Notes/Comments:</label>
+            <textarea rows="3" cols="30"></textarea>
 
-        <label>Notes/Comments:</label><br>
-        <textarea rows="3" cols="30"></textarea><br><br>
-
-        <button type="submit">Add Item</button>
-    </form>
-    <br>
-    <a href="index.html">Back to Home</a>
+            <button type="submit">Add Item</button>
+        </form>
+        <a href="index.html">Back to Home</a>
+    </div>
 </body>
 </html>
-

@@ -1,16 +1,70 @@
 <html>
 <head>
     <title>Login - Cafe Inventory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f6f9;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        form {
+            background-color: #ffffff;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
     <h1>Login to Cafe Inventory</h1>
     <form action="index.html">
-
         <label>Username:</label>
-        <input type="text" required><br><br>
+        <input type="text" required>
 
         <label>Password:</label>
-        <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br><br>
+        <input type="password"
+               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+               title="Must contain at least one number, one uppercase and one lowercase letter, and at least 8 or more characters"
+               required>
 
         <button type="submit">Submit</button>
     </form>

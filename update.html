@@ -1,22 +1,89 @@
 <html>
 <head>
     <title>Update Inventory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 60px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Update Inventory</h1>
-    <form action="view.html">
-        <label>Item ID:</label>
-        <input type="text" required><br><br>
+    <div class="container">
+        <h1>Update Inventory</h1>
+        <form action="updateitem.php" method="POST">
+            <label>Item ID:</label>
+            <input type="text" name="item_id" required>
 
-        <label>New Quantity:</label>
-        <input type="number"><br><br>
+            <label>New Quantity:</label>
+            <input type="number" name="quantity" required>
 
-        <label>New Price (RM):</label>
-        <input type="text"><br><br>
+            <label>New Price (RM):</label>
+            <input type="text" name="price" required>
 
-        <button type="submit">Update Item</button>
-    </form>
-    <a href="index.html">Back to Home</a>
+            <button type="submit">Update Item</button>
+        </form>
+        <a href="index.html">Back to Home</a>
+    </div>
 </body>
 </html>
-
