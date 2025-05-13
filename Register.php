@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "myDB1";
+$dbname = "Cafe_Inventory";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,15 +14,7 @@ if ($conn->connect_error) {
 
 // Get POST data
 $user = $_POST['username'];
-$pass = $_POST['password'];
-
-// Create table
-$conn->query("CREATE TABLE IF NOT EXISTS users (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-)");
+$password = $_POST['password'];
 
 // Insert data
 $sql = "INSERT INTO users (username, password)
@@ -30,6 +22,7 @@ $sql = "INSERT INTO users (username, password)
 
 if ($conn->query($sql) === TRUE) {
     echo "User registered successfully!";
+    echo "Login to your account <a href='login.html'>here</a>";
 } else {
     echo "Error: " . $conn->error;
 }

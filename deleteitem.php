@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "inventory";
+$dbname = "Cafe_Inventory";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
