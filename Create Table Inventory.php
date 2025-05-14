@@ -1,4 +1,6 @@
 <?php
+
+// Database Connection & Create table name
 $servername = "localhost";
 $username = "root";
 $password = "";

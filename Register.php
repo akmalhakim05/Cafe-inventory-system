@@ -25,6 +25,7 @@ if ($conn->query($sql) === TRUE) {
     echo "Login to your account <a href='login.html'>here</a>";
 } else {
     echo "Error: " . $conn->error;
+    echo "<br><a href='register.html'>Go back to register</a>";
 }
 
 $conn->close();

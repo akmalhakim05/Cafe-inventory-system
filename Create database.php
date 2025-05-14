@@ -1,4 +1,4 @@
-<? php
+<?php
 
 // Database Connection & Create database name
 $servername = "localhost";
@@ -9,7 +9,7 @@ $password = "";
 $conn = new mysqli ($servername, $username, $password) ;
 
 // Check connection
-if ($conn->connect error) {
+if ($conn->connect_error) {
     die ("Connection failed: " . $conn->connect_error) ;
 }
 
