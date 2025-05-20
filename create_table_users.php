@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "Cafe_Inventory";
+$dbname = "Cafe_db";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -22,6 +22,7 @@ $sql = "CREATE TABLE users (
 
 if ($conn->query($sql) === TRUE) {
     echo "Table user created successfully";
+    echo "<a href='create_table_inventory.php'>Create Inventory Table</a><br>";
 } else {
     echo "Error creating table: " . $conn->error;
 }

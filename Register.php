@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "Cafe_Inventory";
+$dbname = "Cafe_db";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -13,12 +13,12 @@ if ($conn->connect_error) {
 }
 
 // Get POST data
-$user = $_POST['username'];
+$username = $_POST['username'];
 $password = $_POST['password'];
 
 // Insert data
 $sql = "INSERT INTO users (username, password)
-        VALUES ('$user', '$password')";
+        VALUES ('$username', '$password')";
 
 if ($conn->query($sql) === TRUE) {
     echo "User registered successfully!";

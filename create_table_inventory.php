@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "Cafe_Inventory";
+$dbname = "Cafe_db";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -25,7 +25,9 @@ $sql = "CREATE TABLE inventory (
     exp_date DATE NOT NULL,
     supplier_type ENUM('Local Supplier', 'Imported Supplier') NOT NULL,
     image_path VARCHAR(255),
-    notes TEXT
+    notes TEXT,
+    username VARCHAR(50) NOT NULL,
+    CONSTRAINT fk_username FOREIGN KEY (username) REFERENCES users(username)
 )";
 
 if ($conn->query($sql) === TRUE) {
